@@ -31,7 +31,7 @@ const PROJECTS_REEL: ReelProject[] = [
     year: '2025',
     objective:
       'Landing para captação de membros de clube de alta performance. Posicionamento exclusivo, narrativa de upgrade de vida e funil de aplicação por etapas.',
-    highlight: 'Aplicação privada · Acesso por convite',
+    highlight: 'Aplicação High Ticket · Mentoria',
     tech: ['Next.js', 'GSAP', 'Vercel', 'Tailwind'],
     stat: { n: '98', label: 'PERFORMANCE' },
     stat2: { n: '1.2s', label: 'LCP' },
@@ -54,7 +54,7 @@ const PROJECTS_REEL: ReelProject[] = [
     year: '2025',
     objective:
       'Site da clínica de estética premium da Jana. Estética refinada com tipografia serifa, agendamento direto e showcase de procedimentos por especialidade.',
-    highlight: 'Agendamento integrado · Avaliação gratuita',
+    highlight: 'Whatsaap integrado · Estética Pessoal',
     tech: ['React', 'Framer Motion', 'Vercel'],
     stat: { n: '3d', label: 'DO BRIEFING AO AR' },
     stat2: { n: '1.1s', label: 'LCP' },
@@ -77,7 +77,7 @@ const PROJECTS_REEL: ReelProject[] = [
     year: '2025',
     objective:
       'Plataforma para espaço de bem-estar feminino. Atmosfera acolhedora, identidade visual delicada e funil de agendamento simplificado para múltiplos serviços.',
-    highlight: 'Multi-serviços · Booking em 3 toques',
+    highlight: 'Design Premium · Salão de Beleza',
     tech: ['Next.js', 'Tailwind', 'Vercel'],
     stat: { n: '97', label: 'MOBILE SCORE' },
     stat2: { n: '0.9s', label: 'LCP' },
@@ -100,7 +100,7 @@ const PROJECTS_REEL: ReelProject[] = [
     year: '2025',
     objective:
       'Identidade digital para clínica odontológica Aurora. Atmosfera clean clinical, foco em confiança, antes-e-depois e CTAs diretos para primeira consulta.',
-    highlight: 'Primeira consulta · Avaliação 360°',
+    highlight: 'Protótipo Realista · Clínica Odontológica',
     tech: ['React', 'Tailwind', 'Vercel'],
     stat: { n: '100', label: 'ACESSIBILIDADE' },
     stat2: { n: '1.0s', label: 'LCP' },
