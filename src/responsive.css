@@ -1,0 +1,121 @@
+/* ============================================================
+   Responsive overrides — mobile / tablet polish (load last)
+   Targets: tablet ≤900px, phone ≤600px, small phone ≤400px
+   ============================================================ */
+
+/* Tablet — keep hover-only effects off, ensure touch targets ≥44px */
+@media (max-width: 900px) {
+  /* Bigger touch targets on links/buttons */
+  .nav-cta, .btn, .btn-primary, .btn-ghost,
+  .phx-cta-primary, .phx-cta-ghost,
+  .reel-card-link, .project-cta,
+  .wa-float {
+    min-height: 44px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  .nav-links a, .footer-col a, .nav-logo {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Stop heavy backdrop-filter on tablet (saves GPU) */
+  .nav, .phx-counter, .phx-stat-card,
+  .reel-side, .phx-counter-foot {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Ticker speed: longer on touch */
+  .ticker-track { animation-duration: 60s; }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  /* Disable expensive blur on tiny screens */
+  .phx-counter, .phx-stat-card, .phx-counter-foot,
+  .phx-pill, .reel-side, .reel-card-preview-badge {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Disable heavy radial glows that hurt repaint */
+  .phx-bg-glow, .phx-phone-ring,
+  .reel-mock-glow, .reel-card-preview-glow {
+    display: none !important;
+  }
+
+  /* Kill the conic-gradient spinning ring on hero frame — heavy repaint */
+  .hero-video-frame::before { display: none !important; }
+  /* Soften the hero outer aura on phones */
+  .hero-video-frame::after { box-shadow: 0 0 40px rgba(198,255,0,0.08), inset 0 0 24px rgba(0,0,0,0.5); }
+
+  /* Less section vertical breathing on phone */
+  .section { padding: 60px 20px; }
+
+  /* Ticker compact */
+  .ticker { font-size: 12px; }
+
+  /* Footer stack */
+  .footer { padding: 40px 20px; }
+
+  /* Reduce orbit ring count to 1 — saves continuous repaints */
+  .orbit-ring.r2 { display: none !important; }
+
+  /* Reveal-on-scroll: kill the 40px translate so first paint isn't blank */
+  .reveal { transform: translateY(20px); transition-duration: 0.6s; }
+}
+
+/* Tablet & phone — disable section card hover transforms to avoid jank from finger interactions */
+@media (max-width: 900px) {
+  .project-card:hover,
+  .service-card:hover,
+  .testimonial-card:hover {
+    transform: none;
+  }
+  /* Cap card paddings */
+  .testimonial-card { padding: 24px 22px; gap: 18px; }
+  .service-card { padding: 28px 22px; }
+}
+
+/* Tiny phone (Galaxy Fold / 320px etc) */
+@media (max-width: 400px) {
+  .nav { padding: 12px 14px; }
+  .nav-logo { font-size: 11px; }
+  .nav-cta { padding: 10px 12px !important; font-size: 11px; }
+
+  .hero-eyebrow { font-size: 10px; }
+  .hero-headline { font-size: clamp(36px, 11vw, 48px) !important; }
+  .hero-stat strong { font-size: 18px; }
+  .hero-progress { display: none; }
+
+  /* Loader smaller */
+  .loader-logo { font-size: 40px; }
+  .loader-bar { width: 180px; }
+
+  /* WhatsApp float — repositioned to thumb-friendly area */
+  .wa-float {
+    bottom: 16px !important;
+    right: 16px !important;
+    font-size: 12px;
+    padding: 10px 14px !important;
+  }
+}
+
+/* Coarse pointer (touch) — kill all hover-driven layout shifts */
+@media (pointer: coarse) {
+  .project-card:hover { transform: none; }
+  .reel-card:hover { transform: translate3d(-50%, -50%, 0); }
+  .reel-card:hover .reel-card-preview { transform: none; filter: none; }
+  .phx-cta-primary:hover, .phx-cta-ghost:hover,
+  .btn-primary:hover, .btn-ghost:hover { transform: none; }
+}
+
+/* Saver mode — also when user prefers reduced data */
+@media (prefers-reduced-data: reduce) {
+  .phx-bg-glow, .phx-phone-ring,
+  .reel-mock-glow, .reel-card-preview-glow,
+  .grid-bg, .orbit-ring { display: none !important; }
+  * { animation: none !important; }
+}

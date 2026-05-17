@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node -e \"try { require\\('sharp'\\); console.log\\('sharp available'\\); } catch\\(e\\) { console.log\\('sharp not installed'\\); }\")"
+    ]
+  }
+}
