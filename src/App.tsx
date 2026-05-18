@@ -124,6 +124,8 @@ export default function App() {
   }, []);
 
   return (
+
+    
     <>
       {TWEAKS.showLoader && <Loader />}
       {TWEAKS.showCursor && !isTouchLike && <Cursor />}

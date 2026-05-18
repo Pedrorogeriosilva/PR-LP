@@ -1,7 +1,7 @@
 import React from 'react';
 import { WA_LINK, WhatsAppIcon } from './components';
 
-const HERO_WA_LINK = `https://wa.me/5511960396045?text=${encodeURIComponent(
+const HERO_WA_LINK = `https://wa.me/5511936236227?text=${encodeURIComponent(
   'Olá, vim pelo seu portfólio e gostaria de um site profissional.',
 )}`;
 

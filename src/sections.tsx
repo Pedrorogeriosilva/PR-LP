@@ -795,7 +795,7 @@ export function Footer() {
           SÃO PAULO, BR · GMT-3
           <br />
           <a href={WA_LINK} target="_blank" rel="noreferrer">
-            +55 11 96039-6045
+            +55 11 93623-6227
           </a>
           <br />
           <a href="mailto:pedrorogeriosilva@outlook.com">pedrorogeriosilva@outlook.com</a>

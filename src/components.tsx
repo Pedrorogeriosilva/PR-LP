@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Shared constants */
-export const WA_PHONE = '5511960396045';
+export const WA_PHONE = '5511936236227';
 const WA_MSG = encodeURIComponent(
   'Olá Pedro, vim pelo seu portfólio e quero um site profissional.',
 );
