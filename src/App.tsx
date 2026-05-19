@@ -1,6 +1,8 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Cursor, Loader, Nav, Ticker, WhatsAppFloat } from './components';
 import { Hero } from './hero';
+
 
 // Below-fold sections are code-split — they only download when the user scrolls down,
 // drastically shrinking the initial bundle and Time-to-Interactive on mobile.
@@ -172,6 +174,7 @@ export default function App() {
         </React.Suspense>
       </DeferredSection>
       {TWEAKS.showWAFloat && <WhatsAppFloat />}
+      <Analytics />
     </>
   );
 }
